@@ -16,7 +16,7 @@ const NavbarModal = ({ setIsOpen }) => {
           onClick={() => setIsOpen((prev) => !prev)}
         />
       </div>
-      <div className="p-8 bg-backgroundColor rounded shadow-2xl max-h-[75vh] overflow-y-scroll">
+      <div className="p-8 bg-backgroundColor rounded shadow-2xl max-h-[75vh] overflow-y-auto">
         <ul className=" flex flex-col gap-4">
           {links.map((link, idx) => (
             <li key={idx} className="text-lg">

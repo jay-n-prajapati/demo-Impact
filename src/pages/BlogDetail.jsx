@@ -3,7 +3,7 @@ import Container from "../components/common/Container";
 import PageHeader from "../components/common/PageHeader";
 import BreadCrumb from "../components/common/BreadCrums";
 import { IoSearchOutline } from "react-icons/io5";
-import { categories, tags } from "../constants";
+import { BlogCardItems, categories, tags } from "../constants";
 import { CiUser } from "react-icons/ci";
 import { GoClock } from "react-icons/go";
 import { FaRegCommentDots } from "react-icons/fa6";
@@ -36,7 +36,7 @@ const BlogDetail = () => {
                     quibusdam quia
                   </h2>
                 </div>
-                <div className="flex gap-6">
+                <div className="flex justify-between text-[12px] sm:text-base sm:justify-normal sm:gap-6">
                   <div className="flex items-center gap-1 text-[#575757]">
                     <CiUser className="text-md" />
                     <p>John Doe</p>
@@ -162,6 +162,33 @@ const BlogDetail = () => {
                       <p className="text-[#b2b2b2]">({cat.item})</p>
                     </div>
                   ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl mb-3 font-semibold">
+                  Recent Blog Posts
+                </h3>
+
+                <div className="flex flex-col">
+                  {BlogCardItems.map((blogCardItem) => {
+                    return (
+                      <div key={blogCardItem.src} className="flex gap-5 mb-3">
+                        <img
+                          src={blogCardItem.src}
+                          alt={blogCardItem.title}
+                          className="w-[80px]"
+                        />
+                        <div>
+                          <h4 className="font-bold text-default duration-300 hover:text-accent mb-[5px] cursor-pointer">
+                            {blogCardItem.title}
+                          </h4>
+                          <p className="italic text-default opacity-80 text-sm">
+                            {blogCardItem.publishedAt}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               <div>

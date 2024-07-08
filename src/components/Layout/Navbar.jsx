@@ -5,14 +5,19 @@ import { useState } from "react";
 import Container from "../common/Container";
 import { cn } from "../../utils";
 import NavbarModal from "./NavbarModal";
+import useScroll from "../../hooks/useScroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled] = useScroll("#nav");
 
   return (
     <>
       {isOpen && <NavbarModal setIsOpen={setIsOpen} />}
-      <nav className=" bg-accentColor">
+      <nav
+        className={cn(" bg-accentColor", isScrolled ? "shadow-xl" : "")}
+        id="nav"
+      >
         <Container className="flex items-center justify-between text-white py-4 font-montserrat font-extrabold">
           <div>
             <h1 className="font-montserrat-bold text-xl sm:text-2xl md:text-3xl">

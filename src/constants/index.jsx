@@ -456,3 +456,34 @@ export const portfolioItems = [
     title: "Book 3",
   },
 ];
+
+
+// blogDetail recent blog posts
+
+export const BlogCardItems = [
+  {
+    src: "/images/blog-recent-1.jpg",
+    title: "Nihil blanditiis at in nihil autem",
+    publishedAt: "Jan 1, 2020",
+  },
+  {
+    src: "/images/blog-recent-2.jpg",
+    title: "Quidem autem et impedit",
+    publishedAt: "Jan 1, 2020",
+  },
+  {
+    src: "/images/blog-recent-3.jpg",
+    title: "Id quia et et ut maxime similique occaecati ut",
+    publishedAt: "Jan 1, 2020",
+  },
+  {
+    src: "/images/blog-recent-4.jpg",
+    title: "Laborum corporis quo dara net para",
+    publishedAt: "Jan 1, 2020",
+  },
+  {
+    src: "/images/blog-recent-5.jpg",
+    title: "Et dolores corrupti quae illo quod dolor",
+    publishedAt: "Jan 1, 2020",
+  },
+];
