@@ -9,6 +9,7 @@ import { GoClock } from "react-icons/go";
 import { FaRegCommentDots } from "react-icons/fa6";
 import { BsFolder2, BsTags } from "react-icons/bs";
 import { scrollToTop } from "../utils";
+import Button from "../components/common/Button";
 
 const BlogDetail = () => {
   useEffect(() => {
@@ -133,6 +134,46 @@ const BlogDetail = () => {
                     <BsTags />
                     <p>Creative, Tips, Marketing</p>
                   </div>
+                </div>
+              </div>
+              <div className="shadow-xl p-7 grid gap-4 grid-cols-12 my-10 font-opensans">
+                <div className="col-span-12 ">
+                  <h3 className="text-2xl font-montserrat-bold">
+                    Post Comment
+                  </h3>
+
+                  <p className="text-default text-sm pt-1">
+                    Your email address will not be published. Required fields
+                    are marked *
+                  </p>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Your Name *"
+                  className="col-span-6 py-3 px-4 text-sm border border-gray-300 rounded duration-300 focus:border-accent focus:outline-0"
+                />
+                <input
+                  type="text"
+                  placeholder="Your Email *"
+                  className="col-span-6 py-3 px-4 text-sm border border-gray-300 rounded duration-300 focus:border-accent focus:outline-0"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Your Website *"
+                  className="col-span-12 py-3 px-4 text-sm border border-gray-300 rounded duration-300 focus:border-accent focus:outline-0"
+                />
+
+                <textarea
+                  placeholder="Your Comment *"
+                  className="col-span-12 pt-3 pb-24 px-4 text-sm border border-gray-300 rounded duration-300 focus:border-accent focus:outline-0"
+                ></textarea>
+                <div className="col-span-12 text-center">
+                  <Button
+                    className={"rounded-md text-white hover:bg-[#169485]"}
+                  >
+                    Post Comment
+                  </Button>
                 </div>
               </div>
             </div>

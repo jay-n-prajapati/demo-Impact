@@ -48,7 +48,7 @@ const Navbar = () => {
                     {link.dropdown && (
                       <ul
                         className={cn(
-                          "absolute hidden group-hover/link:block text-black font-medium bg-white rounded pt-4 pl-2 px-3 py-2 min-w-[180px]",
+                          "absolute hidden group-hover/link:block text-black font-medium bg-white rounded pt-4 pl-2 px-3 py-2 min-w-[200px]",
                           link.position
                         )}
                       >
@@ -64,7 +64,7 @@ const Navbar = () => {
                             {subLink.dropdown && (
                               <ul
                                 className={cn(
-                                  "absolute hidden group-hover/subLink:block bg-white rounded min-w-[180px]",
+                                  "absolute hidden group-hover/subLink:block bg-white rounded min-w-[200px]",
                                   subLink.position
                                 )}
                               >
